@@ -1,8 +1,8 @@
 import axios from "axios";
 
 const API = axios.create({
-  baseURL: "http://localhost:3000/api", // Your backend URL
-  withCredentials: true, // For cookies (JWT)
+  baseURL: import.meta.env.VITE_API_BASE_URL || "http://localhost:3000/api",
+  withCredentials: true, 
 });
 
 export default API;   
